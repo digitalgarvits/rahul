@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CheckCircle2, Send, AlertCircle, Sparkles } from "lucide-react";
+import { CheckCircle2, Send } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

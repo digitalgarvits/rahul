@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import {
-  Compass,
   CheckCircle2,
   Users,
   ShieldCheck,

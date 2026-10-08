@@ -1,20 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import {
-  Compass,
   CheckCircle2,
   Users,
   Target,
   ArrowRight,
-  ShieldCheck,
   MapPin,
-  Clock,
   Sparkles,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
 import SectionHeader from "@/components/SectionHeader";
-import { ServiceItem, siteConfig } from "@/data/siteData";
+import { ServiceItem } from "@/data/siteData";
 
 interface ServiceDetailLayoutProps {
   service: ServiceItem;

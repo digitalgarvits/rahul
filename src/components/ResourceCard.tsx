@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { BookOpen, FileText, CheckCircle2, ArrowRight } from "lucide-react";
+import { BookOpen, CheckCircle2, ArrowRight } from "lucide-react";
 import { ResourceItem } from "@/data/siteData";
 
 interface ResourceCardProps {

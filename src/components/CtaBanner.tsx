@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, MapPin, Calendar, Compass, Phone } from "lucide-react";
+import { ArrowRight, MapPin, Calendar, Compass } from "lucide-react";
 import { siteConfig } from "@/data/siteData";
 
 interface CtaBannerProps {

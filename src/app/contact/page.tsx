@@ -2,11 +2,7 @@ import React from "react";
 import {
   MapPin,
   Phone,
-  Mail,
   Clock,
-  Compass,
-  CheckCircle2,
-  Calendar,
   ExternalLink,
   ShieldCheck,
 } from "lucide-react";

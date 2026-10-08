@@ -1,6 +1,6 @@
 import React from "react";
 import { processSteps } from "@/data/siteData";
-import { Compass, CalendarCheck, Activity, TrendingUp, Award, ArrowRight } from "lucide-react";
+import { Compass, CalendarCheck, Activity, TrendingUp, Award } from "lucide-react";
 
 const stepIcons: Record<string, React.ElementType> = {
   Compass,
@@ -17,7 +17,7 @@ export default function ProcessTimeline() {
       <div className="hidden lg:block absolute top-1/2 left-8 right-8 -translate-y-8 h-0.5 bg-gradient-to-r from-brand-200 via-brand-300 to-accent/40 z-0" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
-        {processSteps.map((step, index) => {
+        {processSteps.map((step) => {
           const IconComp = stepIcons[step.icon] || Compass;
 
           return (

@@ -1,16 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import {
   BookOpen,
-  Filter,
   Library,
   FileText,
-  CheckCircle2,
-  ArrowRight,
-  Sparkles,
-  MapPin,
   GraduationCap,
   Award,
 } from "lucide-react";
@@ -18,7 +12,7 @@ import PageHero from "@/components/PageHero";
 import ResourceCard from "@/components/ResourceCard";
 import CtaBanner from "@/components/CtaBanner";
 import SectionHeader from "@/components/SectionHeader";
-import { resourcesData, siteConfig } from "@/data/siteData";
+import { resourcesData } from "@/data/siteData";
 
 const categories = [
   "All",

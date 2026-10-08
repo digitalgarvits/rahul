@@ -1,17 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import {
-  Compass,
-  UserCheck,
-  BarChart3,
-  GraduationCap,
-  HelpCircle,
-  BookOpen,
   ArrowRight,
   CheckCircle2,
   Library,
-  MapPin,
-  Sparkles,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import SectionHeader from "@/components/SectionHeader";

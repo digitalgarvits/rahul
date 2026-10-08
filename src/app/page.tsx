@@ -9,11 +9,8 @@ import {
   Calendar,
   Users,
   Target,
-  BarChart3,
   Sparkles,
   Award,
-  ChevronRight,
-  HelpCircle,
   Phone,
   GraduationCap,
 } from "lucide-react";
