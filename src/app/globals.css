@@ -3,27 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 248, 250, 252;
-  --background-end-rgb: 255, 255, 255;
+  --bg-warm: #F8F7F2;
+  --bg-surface: #FFFFFF;
+  --text-primary: #171717;
+  --text-secondary: #656565;
+  --border-subtle: #DAD8D0;
+  --key-pink: #F3A6C7;
+  --key-coral: #F47757;
+  --key-yellow: #F4C84A;
+  --key-mint: #A8D5A2;
+  --key-orange: #F29A48;
+  --key-burgundy: #792F35;
+  --key-black: #171717;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: #fafbfc;
+  color: #171717;
+  background-color: #F8F7F2;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Subtle dotted grid texture utility */
+.bg-dotted {
+  background-image: radial-gradient(#CBD5E1 1.15px, transparent 1.15px);
+  background-size: 24px 24px;
+}
+
 /* Custom smooth transitions and utility animations */
 html {
   scroll-behavior: smooth;
+  background-color: #F8F7F2;
 }
 
 ::selection {
-  background-color: #f59e0b;
-  color: #0b1528;
+  background-color: #F3A6C7;
+  color: #171717;
 }
 
 /* Subtle modern scrollbar */
@@ -43,4 +59,85 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+/* Hero Section Custom Animations */
+@keyframes heroTickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-hero-ticker {
+  display: flex;
+  width: max-content;
+  animation: heroTickerScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-hero-ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes heroFloatLeft {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes heroFloatRight {
+  0%, 100% {
+    transform: translateY(0px) rotate(1.5deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-hero-float-left {
+  animation: heroFloatLeft 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-hero-float-right {
+  animation: heroFloatRight 6.5s ease-in-out infinite 1s;
+  will-change: transform;
+}
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade-up {
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-ticker {
+    animation: none !important;
+    transform: none !important;
+  }
+  .animate-hero-float-left,
+  .animate-hero-float-right {
+    animation: none !important;
+    transform: none !important;
+  }
+  .animate-hero-fade-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

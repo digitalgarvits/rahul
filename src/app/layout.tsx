@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className="flex min-h-full flex-col bg-slate-50 text-slate-900 antialiased font-sans selection:bg-amber-400 selection:text-brand-950">
+      <body className="flex min-h-full flex-col bg-[#F8F7F2] text-[#171717] antialiased font-sans selection:bg-[#F3A6C7] selection:text-[#171717]">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

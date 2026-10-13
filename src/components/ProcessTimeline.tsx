@@ -10,43 +10,66 @@ const stepIcons: Record<string, React.ElementType> = {
   Award,
 };
 
+const stepKeycapColors = [
+  { bg: "#F47757", text: "#FFFFFF", edge: "#D93838" }, // Coral
+  { bg: "#A8D5A2", text: "#064E3B", edge: "#059669" }, // Mint Green
+  { bg: "#F4C84A", text: "#451A03", edge: "#D97706" }, // Yellow
+  { bg: "#F3A6C7", text: "#881337", edge: "#BE123C" }, // Pink
+  { bg: "#F29A48", text: "#FFFFFF", edge: "#C2410C" }, // Orange
+];
+
 export default function ProcessTimeline() {
   return (
     <div className="relative">
       {/* Desktop connector line */}
-      <div className="hidden lg:block absolute top-1/2 left-8 right-8 -translate-y-8 h-0.5 bg-gradient-to-r from-brand-200 via-brand-300 to-accent/40 z-0" />
+      <div className="hidden lg:block absolute top-12 left-12 right-12 h-0.5 bg-[#DAD8D0] z-0" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
-        {processSteps.map((step) => {
+        {processSteps.map((step, idx) => {
           const IconComp = stepIcons[step.icon] || Compass;
+          const keycap = stepKeycapColors[idx % stepKeycapColors.length];
 
           return (
             <div
               key={step.stepNumber}
-              className="group flex flex-col bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs hover:shadow-card hover:border-brand-300 transition-all duration-200"
+              className="group flex flex-col justify-between bg-white rounded-3xl border border-[#DAD8D0] p-6 shadow-xs hover:-translate-y-1.5 hover:shadow-[0_12px_28px_-6px_rgba(0,0,0,0.08)] transition-all duration-200"
             >
-              {/* Step counter & Icon */}
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-2xl font-black text-brand-200 group-hover:text-brand-900 transition-colors">
-                  {step.stepNumber}
-                </span>
-                <div className="w-10 h-10 rounded-xl bg-brand-50 border border-brand-100 flex items-center justify-center text-brand-700 group-hover:bg-brand-900 group-hover:text-accent-light transition-colors">
-                  <IconComp className="w-5 h-5" />
+              <div>
+                {/* Step Keycap Badge & Icon */}
+                <div className="flex items-center justify-between mb-4">
+                  <div
+                    className="w-11 h-11 rounded-2xl flex items-center justify-center font-black text-sm select-none transition-transform group-hover:scale-105"
+                    style={{
+                      backgroundColor: keycap.bg,
+                      color: keycap.text,
+                      boxShadow: `0 3.5px 0 ${keycap.edge}`,
+                    }}
+                  >
+                    {step.stepNumber}
+                  </div>
+
+                  <div className="w-10 h-10 rounded-2xl bg-[#F8F7F2] border border-[#DAD8D0] flex items-center justify-center text-[#171717] group-hover:text-[#F47757] transition-colors">
+                    <IconComp className="w-4 h-4 stroke-[2.5]" />
+                  </div>
                 </div>
+
+                {/* Step title */}
+                <h3 className="text-base sm:text-lg font-black text-[#171717] tracking-tight group-hover:text-[#F47757] transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-xs font-bold text-[#F47757] mt-1 mb-2 uppercase tracking-wide">
+                  {step.tagline}
+                </p>
+
+                {/* Description */}
+                <p className="text-xs sm:text-sm text-[#656565] leading-relaxed font-medium">
+                  {step.description}
+                </p>
               </div>
 
-              {/* Step name */}
-              <h3 className="text-lg font-bold text-brand-950 group-hover:text-brand-700 transition-colors">
-                {step.title}
-              </h3>
-              <p className="text-xs font-semibold text-accent-dark mb-2">
-                {step.tagline}
-              </p>
-
-              {/* Description */}
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-1">
-                {step.description}
-              </p>
+              <div className="mt-4 pt-3 border-t border-[#DAD8D0]/60 text-[10px] font-bold text-[#656565] uppercase tracking-widest">
+                Milestone Phase 0{idx + 1}
+              </div>
             </div>
           );
         })}

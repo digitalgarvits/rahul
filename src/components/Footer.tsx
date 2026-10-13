@@ -2,55 +2,54 @@ import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/data/siteData";
 import {
-  Compass,
   MapPin,
   Phone,
-  Mail,
-  Clock,
-  ArrowRight,
   ShieldCheck,
   CheckCircle2,
+  CornerDownLeft,
+  GraduationCap,
+  Sparkles,
 } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-950 text-slate-300 border-t border-brand-900">
+    <footer className="bg-[#171717] text-slate-300 border-t border-black select-none">
       {/* Top Value Assurance Banner */}
-      <div className="border-b border-brand-900/70 bg-brand-900/40">
+      <div className="border-b border-neutral-800 bg-[#121212]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-            <div className="flex items-start gap-3">
-              <div className="p-2 rounded-lg bg-brand-850 text-accent-light shrink-0">
+            <div className="flex items-start gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-neutral-800 text-[#F4C84A] flex items-center justify-center shrink-0 border border-neutral-700">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-semibold text-white">Objective & Independent</h4>
-                <p className="text-slate-400 text-xs mt-0.5">
-                  No commercial coaching tie-ins or sales agendas. Purely student-centric strategy.
+                <h4 className="font-bold text-white text-sm">Objective & Independent</h4>
+                <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                  No commercial coaching tie-ins or sales agendas. Purely student-centric academic strategy.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
-              <div className="p-2 rounded-lg bg-brand-850 text-accent-light shrink-0">
+            <div className="flex items-start gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-neutral-800 text-[#A8D5A2] flex items-center justify-center shrink-0 border border-neutral-700">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-semibold text-white">1-on-1 Personal Attention</h4>
-                <p className="text-slate-400 text-xs mt-0.5">
-                  Bespoke mentoring adapted to each student’s temperament, pace, and ambitions.
+                <h4 className="font-bold text-white text-sm">1-on-1 Personal Attention</h4>
+                <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                  Bespoke mentoring adapted to each student's temperament, pacing, and ambitions.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
-              <div className="p-2 rounded-lg bg-brand-850 text-accent-light shrink-0">
+            <div className="flex items-start gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-neutral-800 text-[#F3A6C7] flex items-center justify-center shrink-0 border border-neutral-700">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-semibold text-white">Accessible SDO Khedar Office</h4>
-                <p className="text-slate-400 text-xs mt-0.5">
-                  Rooted in Barwala, Haryana, welcoming both local families and virtual consultations.
+                <h4 className="font-bold text-white text-sm">SDO Khedar Office Hub</h4>
+                <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                  Rooted in Barwala, Haryana, welcoming both local families and virtual online consultations.
                 </p>
               </div>
             </div>
@@ -63,208 +62,180 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand Info (Spans 2 columns) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-3 inline-flex">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-800 to-brand-700 flex items-center justify-center text-white shadow-inner">
-                <Compass className="w-5 h-5 text-accent-light" />
-              </div>
+            <Link href="/" className="inline-flex items-center gap-2.5">
+              <span className="inline-block px-3 py-1 rounded-xl bg-[#F3A6C7] text-[#171717] font-black text-xl tracking-tight shadow-[0_3px_0_#C2185B]">
+                Rahul
+              </span>
               <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tight text-white">
-                  {siteConfig.brandName}
+                <span className="text-sm font-black uppercase tracking-wider text-white">
+                  JEE & GATE GUIDANCE
                 </span>
                 <span className="text-xs text-slate-400">
-                  {siteConfig.brandSubtitle}
+                  SDO Khedar Advisory
                 </span>
               </div>
             </Link>
 
-            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              Personalised educational guidance, structured exam tracking, and college admissions advisory for students preparing for IIT-JEE and engineering careers.
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-sm">
+              Personalised educational guidance, structured exam tracking, and college admissions advisory for students preparing for IIT-JEE, GATE, and engineering careers.
             </p>
 
-            <div className="pt-2 text-xs text-slate-400 space-y-1 bg-brand-900/50 p-3.5 rounded-xl border border-brand-850">
+            {/* Credential summary */}
+            <div className="p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 text-xs text-slate-300 space-y-1.5">
+              <div className="flex items-center gap-2 text-white font-bold">
+                <GraduationCap className="w-4 h-4 text-[#F4C84A]" />
+                <span>Rahul • NIT Kurukshetra EE Alumnus</span>
+              </div>
+              <p className="text-slate-400 text-[11px]">
+                Assistant Engineer / SDO at HPGCL • Cleared JEE 2× • GATE 3×
+              </p>
+            </div>
+
+            <div className="text-xs text-slate-400">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#F47757] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Office Location:</strong> {siteConfig.location.title}
+                  <strong>Office:</strong> {siteConfig.location.title}
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
+          {/* Column 2: Navigation */}
           <div className="space-y-4">
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-300">
-              Quick Links
+            <h3 className="text-xs font-black tracking-widest uppercase text-white">
+              Navigation
             </h3>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <Link
-                  href="/"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
+                <Link href="/" className="hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/about"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  About the Consultancy
+                <Link href="/about" className="hover:text-white transition-colors">
+                  Meet Rahul (About)
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  All Services
+                <Link href="/services" className="hover:text-white transition-colors">
+                  Guidance Services
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/resources"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Books & Notes Resources
+                <Link href="/resources" className="hover:text-white transition-colors">
+                  Academic Resources
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Contact & Book Advisory
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Book a Consultation
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Services */}
+          {/* Column 3: Priority Tracks */}
           <div className="space-y-4">
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-300">
-              Guidance Services
+            <h3 className="text-xs font-black tracking-widest uppercase text-white">
+              Guidance Tracks
             </h3>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link
-                  href="/services/jee-guidance"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  href="/services/iit-jee-consultancy"
+                  className="hover:text-white transition-colors"
                 >
-                  JEE Guidance
+                  IIT-JEE Strategy
                 </Link>
               </li>
               <li>
                 <Link
                   href="/services/gate-strategy"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="hover:text-white transition-colors"
                 >
-                  GATE Strategy
+                  GATE Preparation
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/one-to-one-mentorship"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  href="/services/one-to-one-guidance"
+                  className="hover:text-white transition-colors"
                 >
                   One-to-One Mentorship
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/course-study-planning"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  href="/services/course-tracker"
+                  className="hover:text-white transition-colors"
                 >
                   Course & Study Planning
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/college-career-counselling"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  href="/services/college-counselling"
+                  className="hover:text-white transition-colors"
                 >
-                  College & Career Counselling
+                  College Counselling (JoSAA)
                 </Link>
               </li>
               <li>
                 <Link
                   href="/services/psu-core-engineering"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="hover:text-white transition-colors"
                 >
-                  PSU & Core Engineering
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/doubt-solving"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Doubt Solving
+                  PSU & Engineering Careers
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Contact Details */}
+          {/* Column 4: Contact & CTA */}
           <div className="space-y-4">
-            <h3 className="text-xs font-semibold tracking-wider uppercase text-slate-300">
-              Mentor & Contact
+            <h3 className="text-xs font-black tracking-widest uppercase text-white">
+              Get In Touch
             </h3>
-            <div className="space-y-3 text-xs text-slate-400">
-              <div>
-                <p className="text-sm font-bold text-white">{siteConfig.consultant.name}</p>
-                <p className="text-[11px] text-accent-light font-medium mt-0.5 leading-snug">
-                  {siteConfig.consultant.headline}
-                </p>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-accent shrink-0" />
+            <div className="space-y-2.5 text-xs text-slate-400">
+              <p>
+                Direct Call:{" "}
                 <a
                   href={`tel:${siteConfig.contact.phoneTel}`}
-                  className="text-slate-200 font-semibold hover:text-white transition-colors"
+                  className="text-white font-bold hover:underline block text-sm mt-0.5"
                 >
                   {siteConfig.contact.phoneDisplay}
                 </a>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <span>
-                  {siteConfig.location.title}
-                </span>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-accent shrink-0" />
-                <span>{siteConfig.contact.email}</span>
-              </div>
-              <div className="flex items-start gap-2.5 pt-1">
-                <Clock className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
-                <span>{siteConfig.contact.timings}</span>
-              </div>
+              </p>
+              <p className="text-[11px] leading-relaxed">
+                Timings: {siteConfig.contact.timings}
+              </p>
             </div>
 
+            {/* Keyboard Enter CTA Button */}
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-accent-light hover:text-accent transition-colors"
+                className="inline-flex items-center gap-2.5 bg-neutral-800 hover:bg-neutral-700 text-white font-black text-xs px-4 py-2.5 rounded-xl shadow-[0_3px_0_#000] border border-neutral-700 transition-transform active:translate-y-0.5"
               >
-                <span>Talk to Rahul</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <CornerDownLeft className="w-3.5 h-3.5 text-white stroke-[2.5]" />
+                <span className="uppercase tracking-wider">LET'S TALK</span>
               </Link>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Copyright Bar */}
-      <div className="border-t border-brand-900 bg-brand-950/80 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        {/* Bottom Copyright & Disclaimer */}
+        <div className="mt-12 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            © 2026 {siteConfig.brandName}. All rights reserved. Sub-Divisional Offices, Khedar Power Plant, Barwala, Haryana.
+            © {new Date().getFullYear()} Rahul — JEE & GATE Personalised Guidance. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-slate-400">
-            <span>Independent Academic Mentorship</span>
+          <div className="flex items-center gap-4">
+            <span>SDO Khedar, Barwala, Haryana</span>
             <span>•</span>
-            <span>Personalised Student Advisory</span>
+            <Link href="/contact" className="hover:text-slate-300 transition-colors">
+              Contact & Directions
+            </Link>
           </div>
         </div>
       </div>

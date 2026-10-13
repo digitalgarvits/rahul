@@ -9,6 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        warm: "#F8F7F2",
+        canvas: "#F8F7F2",
+        surface: "#FFFFFF",
+        "near-black": "#171717",
+        "muted-charcoal": "#656565",
+        subtle: "#DAD8D0",
+        "key-pink": "#F3A6C7",
+        "key-coral": "#F47757",
+        "key-yellow": "#F4C84A",
+        "key-mint": "#A8D5A2",
+        "key-orange": "#F29A48",
+        "key-burgundy": "#792F35",
+        "key-black": "#171717",
         brand: {
           950: "#070E1B",
           900: "#0B1528",
@@ -29,15 +42,10 @@ const config: Config = {
           dark: "#060B14",
         },
         accent: {
-          DEFAULT: "#D97706",
-          light: "#F59E0B",
-          dark: "#B45309",
+          DEFAULT: "#F47757",
+          light: "#F4C84A",
+          dark: "#792F35",
           glow: "#FEF3C7",
-        },
-        surface: {
-          50: "#F8FAFC",
-          100: "#F1F5F9",
-          200: "#E2E8F0",
         },
       },
       fontFamily: {
