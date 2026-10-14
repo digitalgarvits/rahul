@@ -238,6 +238,22 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+
+        {/* Website Developer Credit */}
+        <div className="mt-8 pt-6 border-t border-neutral-800/80 flex flex-col items-center justify-center text-center gap-1.5 text-xs">
+          <p className="text-slate-400 flex items-center justify-center flex-wrap gap-1.5">
+            <span>Designed & Developed by</span>
+            <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-neutral-800 border border-neutral-700 text-slate-200 font-semibold shadow-[0_1.5px_0_#000] tracking-wide transition-transform duration-150 hover:-translate-y-0.5 cursor-default">
+              Garvit
+            </span>
+          </p>
+          <a
+            href="mailto:digitalgarvits@gmail.com"
+            className="text-slate-400 hover:text-white transition-colors duration-150 hover:underline underline-offset-4 select-text"
+          >
+            digitalgarvits@gmail.com
+          </a>
+        </div>
       </div>
     </footer>
   );
